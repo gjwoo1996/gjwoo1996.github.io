@@ -1,0 +1,61 @@
+baseURL = "https://gjwoo1996.github.io/"
+languageCode = "ko-KR"
+title = "gjwoo1996's blog"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  title = "gjwoo1996's blog"
+  description = "개발 공부 기록"
+  author = "gjwoo1996"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+
+  [params.homeInfoParams]
+    Title = "안녕하세요 👋"
+    Content = "개발 공부와 일상을 기록하는 블로그입니다."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/gjwoo1996"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:gjwoo9602@gmail.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = true
+    lineNumbersInTable = true
