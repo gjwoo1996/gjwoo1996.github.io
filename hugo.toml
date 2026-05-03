@@ -2,6 +2,7 @@ baseURL = "https://gjwoo1996.github.io/"
 languageCode = "ko-KR"
 title = "gjwoo1996's blog"
 theme = "PaperMod"
+enableRobotsTXT = true
 
 [pagination]
   pagerSize = 10
@@ -10,8 +11,10 @@ theme = "PaperMod"
   env = "production"
   title = "gjwoo1996's blog"
   description = "개발 공부 기록"
+  keywords = ["개발", "블로그", "Hugo", "백엔드"]
   author = "gjwoo1996"
   defaultTheme = "auto"
+  dateFormat = "2006-01-02"
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -50,6 +53,16 @@ theme = "PaperMod"
     name = "Search"
     url = "/search/"
     weight = 30
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  limit = 10
+  keys = ["title", "permalink", "summary", "content"]
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
